@@ -14,19 +14,21 @@ import io.ktor.client.plugins.logging.SIMPLE
 import io.ktor.serialization.kotlinx.json.json
 import javax.inject.Singleton
 import kotlinx.serialization.json.Json
+import sourabh.pal.mysocial.common.data.api.ApiConstants
+import sourabh.pal.mysocial.common.data.api.interceptors.NetworkStatusInterceptor
 
 @Module
 @InstallIn(SingletonComponent::class)
 object ApiModule {
     @Provides
     @Singleton
-    fun provideKtorClient(): HttpClient {
+    fun provideKtorClient(networkStatusInterceptor: NetworkStatusInterceptor): HttpClient {
         return HttpClient(OkHttp){
-            defaultRequest { url("https://rickandmortyapi.com/api/") }
+            defaultRequest { url(ApiConstants.BASE_URL) }
+            install(networkStatusInterceptor.plugin)
             install(Logging) {
                 logger = Logger.SIMPLE
             }
-
             install(ContentNegotiation){
                 json(Json {
                     ignoreUnknownKeys = true
@@ -34,5 +36,4 @@ object ApiModule {
             }
         }
     }
-
 }

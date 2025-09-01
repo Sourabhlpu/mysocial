@@ -47,5 +47,13 @@ gradlePlugin {
             id = libs.plugins.mysocial.android.library.get().pluginId
             implementationClass = "AndroidLibraryConventionPlugin"
         }
+        register("androidRoom"){
+            id = libs.plugins.mysocial.android.room.get().pluginId
+            implementationClass = "AndroidRoomConventionPlugin"
+        }
+        register("hilt") {
+            id = libs.plugins.mysocial.hilt.get().pluginId
+            implementationClass = "HiltConventionPlugin"
+        }
     }
 }

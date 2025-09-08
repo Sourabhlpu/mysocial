@@ -55,5 +55,9 @@ gradlePlugin {
             id = libs.plugins.mysocial.hilt.get().pluginId
             implementationClass = "HiltConventionPlugin"
         }
+        register("androidLibraryCompose") {
+            id = "mysocial.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
     }
 }

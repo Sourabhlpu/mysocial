@@ -27,6 +27,11 @@ android {
     buildFeatures {
         compose = true
     }
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
     namespace = "sourabh.pal.mysocial"
 }
 

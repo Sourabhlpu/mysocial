@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "MySocial"
 include(":app")
 include(":common")
+include(":core:designsystem")

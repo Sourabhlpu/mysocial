@@ -21,9 +21,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import dagger.hilt.android.AndroidEntryPoint
 import kotlin.getValue
-import kotlinx.coroutines.delay
-import sourabh.pal.mysocial.ui.theme.MySocialTheme
 import sourabh.pal.mysocial.common.data.api.Character
+import sourabh.pal.mysocial.core.designsystem.theme.MySocialTheme
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -36,7 +35,6 @@ class MainActivity : ComponentActivity() {
                 mutableStateOf<Character?>(null)
             }
             LaunchedEffect(Unit) {
-                delay(1000)
                 character = viewModel.getFeeds()
             }
             MySocialTheme {

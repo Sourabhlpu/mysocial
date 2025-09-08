@@ -1,9 +1,10 @@
-package sourabh.pal.mysocial.common.data
+package sourabh.pal.mysocial.common.data.di
 
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import sourabh.pal.mysocial.common.data.MySocialRepoImpl
 import sourabh.pal.mysocial.common.domain.repositories.MySocialRepository
 
 @Module

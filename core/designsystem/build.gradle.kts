@@ -28,6 +28,7 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.coil.kt.compose)
+    implementation(libs.kotlinx.datetime)
 
     testImplementation(libs.robolectric)
     testImplementation(libs.androidx.compose.ui.test)

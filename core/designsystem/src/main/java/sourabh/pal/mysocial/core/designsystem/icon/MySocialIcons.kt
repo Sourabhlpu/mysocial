@@ -19,7 +19,7 @@ import androidx.compose.material.icons.rounded.ShortText
 import androidx.compose.material.icons.rounded.Upcoming
 import androidx.compose.material.icons.rounded.ViewDay
 
-object PhotogramIcons {
+object MySocialIcons {
     val Add = Icons.Rounded.Add
     val ArrowBack = Icons.Rounded.ArrowBack
     val Bookmark = Icons.Rounded.Bookmark

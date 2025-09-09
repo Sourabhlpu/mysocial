@@ -38,7 +38,10 @@ android {
 dependencies {
     implementation(project(":common"))
     implementation(project(":core:designsystem"))
+    implementation(project(":core:model"))
 
+    implementation(libs.androidx.compose.material3.adaptive)
+    implementation(libs.androidx.core.splashscreen)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

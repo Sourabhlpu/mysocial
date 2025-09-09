@@ -56,8 +56,12 @@ gradlePlugin {
             implementationClass = "HiltConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "mysocial.android.library.compose"
+            id = libs.plugins.mysocial.android.compose.get().pluginId
             implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("jvmLibrary") {
+            id = libs.plugins.mysocial.jvm.library.get().pluginId
+            implementationClass = "JvmLibraryConventionPlugin"
         }
     }
 }

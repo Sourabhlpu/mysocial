@@ -24,3 +24,4 @@ rootProject.name = "MySocial"
 include(":app")
 include(":common")
 include(":core:designsystem")
+include(":core:model")

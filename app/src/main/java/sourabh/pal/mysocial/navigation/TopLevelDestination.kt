@@ -3,6 +3,7 @@ package sourabh.pal.mysocial.navigation
 import androidx.annotation.StringRes
 import androidx.compose.ui.graphics.vector.ImageVector
 import kotlin.reflect.KClass
+import sourabh.pal.mysocial.core.designsystem.icon.MySocialIcons
 
 enum class TopLevelDestination(
     val selectedIcon: ImageVector,

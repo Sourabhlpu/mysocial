@@ -25,6 +25,8 @@ coil = "2.2.2"
 robolectric = "4.14.1"
 androidxNavigation = "2.8.5"
 kotlinxDatetime = "0.6.1"
+androidxCoreSplashscreen = "1.0.1"
+androidxComposeMaterial3Adaptive = "1.1.0-rc01"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -58,6 +60,8 @@ robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "
 androidx-compose-ui-test = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
 kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
+androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "androidxCoreSplashscreen" }
+androidx-compose-material3-adaptive = { group = "androidx.compose.material3.adaptive", name = "adaptive", version.ref = "androidxComposeMaterial3Adaptive" }
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -95,4 +99,5 @@ mysocial-android-library = { id = "mysocial.android.library" }
 mysocial-android-room = { id = "mysocial.android.room" }
 mysocial-hilt = { id = "mysocial.hilt" }
 mysocial-android-compose = { id = "mysocial.android.library.compose" }
+mysocial-jvm-library = { id = "mysocial.jvm.library" }
 

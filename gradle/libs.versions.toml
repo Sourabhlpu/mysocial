@@ -23,6 +23,8 @@ androidxTracing = "1.1.0"
 androidxComposeCompiler = "1.4.5"
 coil = "2.2.2"
 robolectric = "4.14.1"
+androidxNavigation = "2.8.5"
+kotlinxDatetime = "0.6.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -54,6 +56,8 @@ room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "
 coil-kt-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
 androidx-compose-ui-test = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "androidxNavigation" }
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }

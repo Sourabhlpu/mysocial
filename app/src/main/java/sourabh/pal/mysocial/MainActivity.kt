@@ -93,7 +93,6 @@ class MainActivity : ComponentActivity() {
             val currentTimeZone by appState.currentTimeZone.collectAsStateWithLifecycle()
 
             CompositionLocalProvider(LocalTimeZone provides currentTimeZone) {
-
                 MySocialTheme(
                     darkTheme = themeSettings.darkTheme,
                     androidTheme = themeSettings.androidTheme,

@@ -14,6 +14,8 @@ import androidx.navigation.NavDestination.Companion.hasRoute
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
+import androidx.compose.material3.windowsizeclass.WindowSizeClass
+import androidx.compose.material3.windowsizeclass.WindowWidthSizeClass
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
@@ -23,18 +25,21 @@ import sourabh.pal.mysocial.common.data.util.TimeZoneMonitor
 
 @Composable
 fun rememberMySocialAppState(
+    windowSizeClass: WindowSizeClass,
     networkMonitor: NetworkMonitor,
     timeZoneMonitor: TimeZoneMonitor,
     coroutineScope: CoroutineScope = rememberCoroutineScope(),
     navController: NavHostController = rememberNavController(),
 ): MySocialAppState {
     return remember(
+        windowSizeClass,
         navController,
         coroutineScope,
         networkMonitor,
         timeZoneMonitor
     ) {
         MySocialAppState(
+            windowSizeClass = windowSizeClass,
             navController = navController,
             coroutineScope = coroutineScope,
             networkMonitor = networkMonitor,
@@ -45,6 +50,7 @@ fun rememberMySocialAppState(
 
 @Stable
 class MySocialAppState(
+    val windowSizeClass: WindowSizeClass,
     val navController: NavHostController,
     val coroutineScope: CoroutineScope,
     timeZoneMonitor: TimeZoneMonitor,
@@ -71,9 +77,11 @@ class MySocialAppState(
             }
         }
 
-    val isOffline = networkMonitor
-        .isOnline()
-        .map { Boolean::not }
+    val shouldShowBottomBar: Boolean
+        get() = windowSizeClass.widthSizeClass == WindowWidthSizeClass.Compact
+
+    val isOffline = networkMonitor.isOnline
+        .map ( Boolean::not )
         .stateIn(
             scope = coroutineScope,
             started = SharingStarted.WhileSubscribed(5_000),
